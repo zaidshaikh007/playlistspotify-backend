@@ -1,4 +1,5 @@
 import express from 'express';
+import { Request, Response } from 'express';
 import dbConnection from './database';
 
 import userRoutes from './routes/userRoutes';
@@ -17,6 +18,10 @@ app.use(cors());
 cronJobs();
 app.use('/api/user', userRoutes);
 app.use('/api/playlist', playListRoutes);
+
+app.use('/', (req: Request, res: Response) => {
+    res.status(200).send("Welcome to spotify playlist");
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}!`);
