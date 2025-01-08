@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.profile = exports.signup = exports.login = void 0;
 const userModel_1 = __importDefault(require("../models/userModel"));
-const { verifyPassword, generateToken, hashPassword } = require("../");
+const { verifyPassword, generateToken, hashPassword } = require("../utils/authUtils");
 const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { email, password } = req.body;

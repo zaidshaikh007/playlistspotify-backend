@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import User from "../models/userModel";
-const { verifyPassword, generateToken, hashPassword } = require("../");
+const { verifyPassword, generateToken, hashPassword } = require("../utils/authUtils");
 
 export const login = async (req: Request, res: Response) => {
     try {
