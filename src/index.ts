@@ -5,7 +5,7 @@ import dbConnection from './database';
 import userRoutes from './routes/userRoutes';
 import playListRoutes from './routes/playListRoutes';
 import dotenv from 'dotenv';
-import cronJobs from "./src/jobs";
+import cronJobs from "./jobs/index";
 import cors from 'cors';
 dotenv.config();
 
