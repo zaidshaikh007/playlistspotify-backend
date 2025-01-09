@@ -6,7 +6,7 @@ dotenv.config();
 import spotifyCredModel from "../models/spotifyCredModel";
 
 function spotifyUpdate() {
-  const jobFunction = cron.schedule(`*/50 * * * *`, async () => {
+  const jobFunction = cron.schedule(`*/60 * * * *`, async () => {
     console.log("starting job...");
 
     try{
